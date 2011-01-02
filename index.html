@@ -1,0 +1,105 @@
+<!--
+JQueryJigsaw is a jigsaw puzzle made with jquery.Users pick an image which is then borken
+up into smaller images, which are randomly displayed on the screen. The user must then then
+reconstruct the image by dragging and dropping the pieces onto the board
+if he or she wishes to feel accomplished and avoid bruising his or her ego.
+Written by Arvind Shrihari and Stephen Marin
+-->
+<html>
+	<head>
+		<title> JQueryJigsaw </title>
+		<link type="text/css" rel="stylesheet" media="screen" href="game.css">
+
+		<script type="text/javascript" src="jquery-1.2.3.min.js"></script>
+		<script type="text/javascript" src="plugins/jquery.ui-1.5b/jquery.dimensions.js"></script>
+		<script type="text/javascript" src="plugins/jquery.ui-1.5b/ui.mouse.js"></script>
+		<script type="text/javascript" src="plugins/jquery.ui-1.5b/ui.draggable.js"></script>
+		<script type="text/javascript" src="plugins/jquery.ui-1.5b/ui.draggable.ext.js"></script>
+		<script type="text/javascript" src="plugins/jquery.ui-1.5b/ui.droppable.js"></script>
+		<script type="text/javascript" src="plugins/jquery.ui-1.5b/ui.droppable.ext.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+	<body>
+	<!-- the instructions div, this is where messages are sent to the user regarding what they should do next -->
+		<div class = "instructions">Welcome to JQueryJigsaw! Pick a puzzle to begin - Click on one of the images below!</div>
+		<!-- the menu div, this is where smaller versions of the seven puzzles are displayed and the user can select a puzzle
+		by clicking on it-->
+		<div class = "menu">
+			<br>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = "lazydays" src ="images/lazydays/menupic.jpg" height = 60 width = 100 >
+			</a>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = 'treeinforest' src ="images/treeinforest/menupic.jpg" height = 60 width = 100 >
+			</a>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = "bostonskyline" src ="images/bostonskyline/menupic.jpg" height = 60 width = 100 >
+			</a>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = "stormysunshine" src ="images/stormysunshine/menupic.jpg" height = 60 width = 100 >
+			</a>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = "nyatnight" src ="images/nyatnight/menupic.jpg" height = 60 width = 100 >
+			</a>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = "beautifulcosmos" src ="images/beautifulcosmos/menupic.jpg" height = 60 width = 100 >
+			</a>
+			<a class = "menued" href = #>
+			<img class = "imgs" id = "coloredwindows" src ="images/coloredwindows/menupic.jpg" height = 60 width = 100 >
+			</a>
+		</div>
+		<!-- the preview div, this is where the user gets a preview of the puzzle when he or she scrolls over the image on the menu -->
+		<div class = "preview"></div>
+		<!-- the winner div, this is where the user gets to see the complete image after he or she puts it together-->
+		<div class = "winner"></div>
+		<!-- the main div, this is the "board" with a table containing a bunch of "drop" divs that will be filled with
+		droppables. the ids of the droppables are important and will match up with the ids of the right pieces of the puzzle -->
+		<div class = "main">
+			<table class="table">
+				<tr>
+					<td><div class = "drop" id="1"></div> </td>
+					<td><div class = "drop" id="2"></div> </td>
+					<td><div class = "drop" id="3"></div> </td>
+					<td><div class = "drop" id="4"></div> </td>
+					<td><div class = "drop" id="5"></div> </td>
+				</tr>
+				<tr>
+					<td><div class = "drop" id="6"></div> </td>
+					<td><div class = "drop" id="7"></div> </td>
+					<td><div class = "drop" id="8"></div> </td>
+					<td><div class = "drop" id="9"></div> </td>
+					<td><div class = "drop" id="10"></div> </td>
+				</tr>
+				<tr>
+					<td><div class = "drop" id="11"></div> </td>
+					<td><div class = "drop" id="12"></div> </td>
+					<td><div class = "drop" id="13"></div> </td>
+					<td><div class = "drop" id="14"></div> </td>
+					<td><div class = "drop" id="15"></div> </td>
+				</tr>
+				<tr>
+					<td><div class = "drop" id="16"></div> </td>
+					<td><div class = "drop" id="17"></div> </td>
+					<td><div class = "drop" id="18"></div> </td>
+					<td><div class = "drop" id="19"></div> </td>
+					<td><div class = "drop" id="20"></div> </td>
+				</tr>
+				<tr>
+					<td><div class = "drop" id="21"></div> </td>
+					<td><div class = "drop" id="22"></div> </td>
+					<td><div class = "drop" id="23"></div> </td>
+					<td><div class = "drop" id="24"></div> </td>
+					<td><div class = "drop" id="25"></div> </td>
+				</tr>
+			</table>
+		</div>
+		<!-- this is the div that will contain the pieces of the jigsaw puzzle-->
+		<div class = "pieces">
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<b><i>
+		Made by Arvind Shrihari and Stephen Marin
+		</b></i>
+	</body>
+</html>
